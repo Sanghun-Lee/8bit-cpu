@@ -1,0 +1,59 @@
+기본 패치
+1. 스타트 0 >> 1 ---- 사용자 입력
+2. MAR선택기 0 >> 1
+3(4). MAR control signal 0 >> 1
+4(3). PC선택기 0 >> 1
+5. PC control signal 0 >> 1
+6. MBR선택기 0 >> 1
+7. MBR control signal 0 >> 1
+8. IR control signal 0 >> 1
+////////////////////////////////////// fetch
+
+LDM direct (101)
+1. MAR선택기 1 >> 0
+2. MAR control signal 0 >> 1
+3. MBR선택기 0 >> 1 (또는 상태유지)
+4. MBR control signal 0 >> 1
+----------------------------------------- direct
+5. AC값 0으로 초기화 스위치 0 >> 1
+6. AC control signal 0 >> 1
+
+///////////////////////////////////// LDM direct
+************************************************** 명령 하나 완료
+
+다시 패치
+1. MAR선택기 0 >> 1
+2. MAR control signal 0 >> 1
+3. PC선택기 0 >> 1 (또는 상태유지)
+4. PC control signal 0 >> 1
+5. MBR선택기 0 >> 1 (또는 상태유지)
+6. MBR control signal 0 >> 1
+7. IR control signal 0 >> 1
+/////////////////////////////////////// fetch
+
+PLUS direct (011)
+1. MAR선택기 1 >> 0
+2. MAR control signal 0 >> 1
+3. MBR선택기 0 >> 1 (또는 상태유지)
+4. MBR control signal 0 >> 1
+------------------------------------------ direct
+5. AC control signal 0 >> 1 (초기화스위치는 건들면 안된다)
+///////////////////////////////////////////////////////////// PLUS direct
+********************************************************** 두번째 명령어 완료
+
+다시 패치
+1. MAR선택기 0 >> 1
+2. MAR control signal 0 >> 1
+3. PC선택기 0 >> 1 (상태유지)
+4. PC control signal 0 >> 1
+5. MBR선택기 0 >> 1
+6. MBR control signal 0 >> 1
+7. IR control signal 0 >> 1
+//////////////////////////////////////// fetch
+
+SAVE immediate (000)
+1. MAR선택기 1 >> 0
+2. MAR control signal 0 >> 1
+3. MBR선택기 1 >> 0
+4. MBR control signal 0 >> 1
+///////////////////////////////////////// SAVE immdiate
